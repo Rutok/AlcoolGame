@@ -17,6 +17,13 @@
 		25173D8D1EA6557600C5B449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25173D8B1EA6557600C5B449 /* LaunchScreen.storyboard */; };
 		25173D981EA6557700C5B449 /* AlcoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25173D971EA6557700C5B449 /* AlcoolTests.swift */; };
 		25173DA31EA6557700C5B449 /* AlcoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25173DA21EA6557700C5B449 /* AlcoolUITests.swift */; };
+		25173DB11EA657D500C5B449 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25173DB01EA657D500C5B449 /* Player.swift */; };
+		25173DB31EA6642A00C5B449 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25173DB21EA6642A00C5B449 /* HomeViewController.swift */; };
+		25173DB51EA6649000C5B449 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25173DB41EA6649000C5B449 /* SettingsViewController.swift */; };
+		25173DB71EA664B100C5B449 /* NameSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25173DB61EA664B100C5B449 /* NameSetViewController.swift */; };
+		25173DB91EA669C900C5B449 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25173DB81EA669C900C5B449 /* HelpViewController.swift */; };
+		25173DBB1EA66A7A00C5B449 /* IGSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25173DBA1EA66A7A00C5B449 /* IGSettingsViewController.swift */; };
+		258FD49C1EA68F280034C770 /* PlayerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258FD49B1EA68F280034C770 /* PlayerTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,13 @@
 		25173D9E1EA6557700C5B449 /* AlcoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25173DA21EA6557700C5B449 /* AlcoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlcoolUITests.swift; sourceTree = "<group>"; };
 		25173DA41EA6557700C5B449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25173DB01EA657D500C5B449 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		25173DB21EA6642A00C5B449 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		25173DB41EA6649000C5B449 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		25173DB61EA664B100C5B449 /* NameSetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameSetViewController.swift; sourceTree = "<group>"; };
+		25173DB81EA669C900C5B449 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		25173DBA1EA66A7A00C5B449 /* IGSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IGSettingsViewController.swift; sourceTree = "<group>"; };
+		258FD49B1EA68F280034C770 /* PlayerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				25173D7C1EA6557600C5B449 /* AppDelegate.swift */,
+				258FD49B1EA68F280034C770 /* PlayerTableViewCell.swift */,
 				25173D7E1EA6557600C5B449 /* GameScene.sks */,
 				25173D801EA6557600C5B449 /* Actions.sks */,
 				25173D821EA6557600C5B449 /* GameScene.swift */,
@@ -112,6 +127,12 @@
 				25173D891EA6557600C5B449 /* Assets.xcassets */,
 				25173D8B1EA6557600C5B449 /* LaunchScreen.storyboard */,
 				25173D8E1EA6557600C5B449 /* Info.plist */,
+				25173DB01EA657D500C5B449 /* Player.swift */,
+				25173DB21EA6642A00C5B449 /* HomeViewController.swift */,
+				25173DB41EA6649000C5B449 /* SettingsViewController.swift */,
+				25173DB61EA664B100C5B449 /* NameSetViewController.swift */,
+				25173DB81EA669C900C5B449 /* HelpViewController.swift */,
+				25173DBA1EA66A7A00C5B449 /* IGSettingsViewController.swift */,
 			);
 			path = Alcool;
 			sourceTree = "<group>";
@@ -270,9 +291,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25173DB31EA6642A00C5B449 /* HomeViewController.swift in Sources */,
+				25173DB71EA664B100C5B449 /* NameSetViewController.swift in Sources */,
+				258FD49C1EA68F280034C770 /* PlayerTableViewCell.swift in Sources */,
+				25173DB11EA657D500C5B449 /* Player.swift in Sources */,
+				25173DB91EA669C900C5B449 /* HelpViewController.swift in Sources */,
 				25173D831EA6557600C5B449 /* GameScene.swift in Sources */,
 				25173D851EA6557600C5B449 /* GameViewController.swift in Sources */,
 				25173D7D1EA6557600C5B449 /* AppDelegate.swift in Sources */,
+				25173DB51EA6649000C5B449 /* SettingsViewController.swift in Sources */,
+				25173DBB1EA66A7A00C5B449 /* IGSettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +545,7 @@
 				25173DA91EA6557700C5B449 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25173DAA1EA6557700C5B449 /* Build configuration list for PBXNativeTarget "AlcoolTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +554,7 @@
 				25173DAC1EA6557700C5B449 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25173DAD1EA6557700C5B449 /* Build configuration list for PBXNativeTarget "AlcoolUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +563,7 @@
 				25173DAF1EA6557700C5B449 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
