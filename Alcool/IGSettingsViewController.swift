@@ -14,6 +14,8 @@ class IGSettingsViewController: UIViewController {
     @IBOutlet weak var BackButton: UIButton!
     @IBOutlet weak var QuitButton: UIButton!
     
+    var game :Game?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,15 +38,9 @@ class IGSettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let dest = segue.destination as? GameViewController {
+            dest.game = game!
+        }
     }
-    */
-
 }

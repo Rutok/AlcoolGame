@@ -12,26 +12,36 @@ import GameplayKit
 
 class GameViewController: UIViewController {
     
-    var players :Array<Player>?
+    var game :Game?
+    
+    @IBOutlet weak var SettingsButton: UIButton!
+    @IBOutlet weak var HelpButton: UIButton!
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if let view = self.view as! SKView? {
             // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
+            if let scene = SKScene(fileNamed: "GameScene") as! GameScene?{
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
-                
-                // Present the scene
+                scene.game = game
+                scene.addChild(scene.game!.background)
                 view.presentScene(scene)
             }
-            
             view.ignoresSiblingOrder = true
-            
             view.showsFPS = true
             view.showsNodeCount = true
         }
+        let screenSize: CGRect = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        SettingsButton.center.x = screenWidth - (SettingsButton.bounds.width / 2)
+        SettingsButton.center.y = 0 + (SettingsButton.bounds.height / 2)
+        HelpButton.center.x = screenWidth - (SettingsButton.bounds.width) - (HelpButton.bounds.width / 2)
+        HelpButton.center.y = 0 + (HelpButton.bounds.height / 2)
     }
 
     override var shouldAutorotate: Bool {
@@ -40,9 +50,9 @@ class GameViewController: UIViewController {
 
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
+            return .portrait
         } else {
-            return .all
+            return .portrait
         }
     }
 
@@ -53,5 +63,19 @@ class GameViewController: UIViewController {
 
     override var prefersStatusBarHidden: Bool {
         return true
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let view = self.view as! SKView? {
+            if let scene = view.scene {
+                scene.removeAllChildren()
+            }
+        }
+        if let dest = segue.destination as? HelpViewController {
+            dest.game = game
+        }
+        if let dest = segue.destination as? IGSettingsViewController {
+            dest.game = game
+        }
     }
 }

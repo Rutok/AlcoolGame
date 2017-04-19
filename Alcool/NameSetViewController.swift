@@ -11,9 +11,17 @@ import UIKit
 class NameSetViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var NbPlayers :Int?
+    var PNames = Array<String>()
     
     @IBOutlet weak var Startbutton: UIButton!
     @IBOutlet weak var TableView: UITableView!
+    
+   /* @IBAction func NameFieldChanged(_ sender: UITextField) {
+        if let index = self.TableView.indexPathForRow(at: sender.center) {
+            let cell :PlayerTableViewCell = self.TableView.cellForRow(at: index) as! PlayerTableViewCell
+            PNames[index.row] = cell.NameField.text!
+        }
+    }*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,14 +54,18 @@ class NameSetViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         cell.IdLabel.text = "\(indexPath.row + 1)" + ". :"
         cell.NameField.text = "Nom"
+        PNames.append("Nom")
         // set the text from the data model
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    /*    if let dest = segue.destination as? GameViewController {
-            
+        let cells = self.TableView.visibleCells as! Array<PlayerTableViewCell>
+        for i in 0..<cells.count {
+            PNames[i] = cells[i].NameField.text!
         }
-    */
+        if let dest = segue.destination as? GameViewController {
+            dest.game = Game.init(PlayersName: PNames)
+        }
     }
 }

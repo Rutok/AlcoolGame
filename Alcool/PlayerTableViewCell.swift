@@ -10,6 +10,10 @@ import UIKit
 
 class PlayerTableViewCell: UITableViewCell {
     
+    var indexPath: IndexPath? {
+        return (superview as? UITableView)?.indexPath(for: self)
+    }
+    
     @IBOutlet weak var IdLabel: UILabel!
     @IBOutlet weak var NameField: UITextField!
 }

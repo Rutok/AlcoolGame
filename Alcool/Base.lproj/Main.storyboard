@@ -32,7 +32,7 @@
                                 <rect key="frame" x="83" y="505" width="209" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.33220894269899226" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
@@ -165,7 +165,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nXP-lY-NZP" id="ENk-wS-bhR">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9BO-Hk-FSN">
@@ -237,6 +237,10 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="HelpButton" destination="MRV-YN-UiZ" id="Sa5-q6-ixI"/>
+                        <outlet property="SettingsButton" destination="LIY-8a-X6c" id="lsl-7O-mqx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
@@ -298,7 +302,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6z-8L-wJ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1442" y="-1733"/>
+            <point key="canvasLocation" x="-1521" y="-1750"/>
         </scene>
         <!--Help View Controller-->
         <scene sceneID="EjJ-3q-1Td">
@@ -341,7 +345,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Gi-Hu-VYr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-698" y="-564"/>
+            <point key="canvasLocation" x="639" y="-42"/>
         </scene>
     </scenes>
     <resources>
@@ -349,6 +353,6 @@
         <image name="qmark" width="64" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="UJe-oP-l0n"/>
+        <segue reference="Trs-2a-Rz9"/>
     </inferredMetricsTieBreakers>
 </document>
