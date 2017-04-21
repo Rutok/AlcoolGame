@@ -16,13 +16,6 @@ class NameSetViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var Startbutton: UIButton!
     @IBOutlet weak var TableView: UITableView!
     
-   /* @IBAction func NameFieldChanged(_ sender: UITextField) {
-        if let index = self.TableView.indexPathForRow(at: sender.center) {
-            let cell :PlayerTableViewCell = self.TableView.cellForRow(at: index) as! PlayerTableViewCell
-            PNames[index.row] = cell.NameField.text!
-        }
-    }*/
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

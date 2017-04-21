@@ -30,6 +30,12 @@ class GameViewController: UIViewController {
                 scene.scaleMode = .aspectFill
                 scene.game = game
                 scene.addChild(scene.game!.background)
+                if scene.game?.currentActivity == nil {
+                    scene.newTurn()
+                }
+                else {
+                    scene.setLabel()
+                }
                 view.presentScene(scene)
             }
             view.ignoresSiblingOrder = true
